@@ -44,8 +44,6 @@ io.on("connection", (client) => {
   client.on("disconnect", () => {
     console.log("client disconnected", client.id);
   });
-
-  io.sockets.emit("new-vote", true);
 });
 
 httpServer.listen(port, () => {
